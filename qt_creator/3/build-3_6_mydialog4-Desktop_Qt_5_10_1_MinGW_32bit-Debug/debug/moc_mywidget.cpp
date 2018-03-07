@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../3_5_mydialog3/mywidget.h"
+#include "../../3_6_mydialog4/mywidget.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -20,28 +20,27 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_MyWidget_t {
+struct qt_meta_stringdata_Mywidget_t {
     QByteArrayData data[3];
-    char stringdata0[37];
+    char stringdata0[32];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_MyWidget_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Mywidget_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_MyWidget_t qt_meta_stringdata_MyWidget = {
+static const qt_meta_stringdata_Mywidget_t qt_meta_stringdata_Mywidget = {
     {
-QT_MOC_LITERAL(0, 0, 8), // "MyWidget"
-QT_MOC_LITERAL(1, 9, 26), // "on_showChildButton_clicked"
-QT_MOC_LITERAL(2, 36, 0) // ""
+QT_MOC_LITERAL(0, 0, 8), // "Mywidget"
+QT_MOC_LITERAL(1, 9, 21), // "on_pushButton_clicked"
+QT_MOC_LITERAL(2, 31, 0) // ""
 
     },
-    "MyWidget\0on_showChildButton_clicked\0"
-    ""
+    "Mywidget\0on_pushButton_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_MyWidget[] = {
+static const uint qt_meta_data_Mywidget[] = {
 
  // content:
        7,       // revision
@@ -55,7 +54,7 @@ static const uint qt_meta_data_MyWidget[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x0a /* Public */,
+       1,    0,   19,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -63,39 +62,39 @@ static const uint qt_meta_data_MyWidget[] = {
        0        // eod
 };
 
-void MyWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Mywidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        MyWidget *_t = static_cast<MyWidget *>(_o);
+        Mywidget *_t = static_cast<Mywidget *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_showChildButton_clicked(); break;
+        case 0: _t->on_pushButton_clicked(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject MyWidget::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_MyWidget.data,
-      qt_meta_data_MyWidget,  qt_static_metacall, nullptr, nullptr}
+QT_INIT_METAOBJECT const QMetaObject Mywidget::staticMetaObject = {
+    { &QWidget::staticMetaObject, qt_meta_stringdata_Mywidget.data,
+      qt_meta_data_Mywidget,  qt_static_metacall, nullptr, nullptr}
 };
 
 
-const QMetaObject *MyWidget::metaObject() const
+const QMetaObject *Mywidget::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *MyWidget::qt_metacast(const char *_clname)
+void *Mywidget::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_MyWidget.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_Mywidget.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int MyWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Mywidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
