@@ -31,5 +31,12 @@ void Widget::paintEvent(QPaintEvent *event)
     QFont font("宋体",15,QFont::Bold,true);
     font.setUnderline(true);
     font.setOverline(true);
-
+    font.setCapitalization(QFont::SmallCaps);
+    font.setLetterSpacing(QFont::AbsoluteSpacing,10);
+    painter.setFont(font);
+    painter.setPen(Qt::green);
+    painter.drawText(120,80,tr("rice"));
+    painter.translate(100,100);
+    painter.rotate(90);
+    painter.drawText(0,0,tr("helloQt"));
 }
