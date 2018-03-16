@@ -4,6 +4,7 @@
 #include <QGraphicsSceneHoverEvent>
 #include <QGraphicsSceneContextMenuEvent>
 #include <QMenu>
+#include <QGraphicsEffect>
 
 MyItem::MyItem()
 {
@@ -36,6 +37,47 @@ void MyItem::paint(QPainter *painter,const QStyleOptionGraphicsItem *option, QWi
 
 void MyItem::keyPressEvent(QKeyEvent *event)
 {
+    switch(event->key())
+    {
+    case Qt::Key_1:
+    {
+        QGraphicsBlurEffect *blurEffect = new QGraphicsBlurEffect;
+        blurEffect->setBlurHints(QGraphicsBlurEffect::QualityHint);
+        blurEffect->setBlurRadius(8);
+        setGraphicsEffect(blurEffect);
+        break;
+    }
+    case Qt::Key_2:
+    {
+        QGraphicsColorizeEffect *colorizeEffect = new QGraphicsColorizeEffect;
+        colorizeEffect->setColor(Qt::white);
+        colorizeEffect->setStrength(0.6);
+        setGraphicsEffect(colorizeEffect);
+        break;
+    }
+    case Qt::Key_3:
+    {
+        QGraphicsDropShadowEffect *dropShadowEffect = new QGraphicsDropShadowEffect;
+        dropShadowEffect->setColor(QColor(63,63,63,100));
+        dropShadowEffect->setBlurRadius(2);
+        dropShadowEffect->setOffset(10);
+        setGraphicsEffect(dropShadowEffect);
+        break;
+    }
+    case Qt::Key_4:
+    {
+        QGraphicsOpacityEffect *opacityEffect = new QGraphicsOpacityEffect;
+        opacityEffect->setOpacity(0.4);
+        setGraphicsEffect(opacityEffect);
+        break;
+    }
+    case Qt::Key_5:
+    {
+        graphicsEffect()->setEnabled(false);
+        break;
+    }
+
+    }
     if(event->key() == Qt::Key_Down)
         moveBy(0,10);
 }
