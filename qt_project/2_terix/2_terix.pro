@@ -9,4 +9,5 @@ HEADERS += \
 
 SOURCES += \
     mybox.cpp \
-    myview.cpp
+    myview.cpp \
+    main.cpp

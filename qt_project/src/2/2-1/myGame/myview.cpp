@@ -69,7 +69,7 @@ void MyView::clearFullRows()
 {
     // 获取比一行方格较大的矩形中包含的所有小方块
     for (int y = 429; y > 50; y -= 20) {
-        QList<QGraphicsItem *> list = scene()->items(199, y, 202, 22, Qt::ContainsItemShape);
+//        QList<QGraphicsItem *> list = scene()->items(199, y, 202, 22, Qt::ContainsItemShape);
         // 如果该行已满
         if (list.count() == 10) {
             foreach (QGraphicsItem *item, list) {
@@ -98,8 +98,8 @@ void MyView::moveBox()
     // 从位置最靠上的满行开始
     for (int i = rows.count(); i > 0;  --i) {
         int row = rows.at(i - 1);
-        foreach (QGraphicsItem *item, scene()->items(199, 49, 202, row - 47, Qt::ContainsItemShape)) {
-            item->moveBy(0, 20);
+//        foreach (QGraphicsItem *item, scene()->items(199, 49, 202, row - 47, Qt::ContainsItemShape)) {
+//            item->moveBy(0, 20);
         }
     }
     // 更新分数

@@ -85,11 +85,11 @@ void BoxGroup::keyPressEvent(QKeyEvent *event)
             moveBy(-20, 0);
         break;
 
-    case Qt::Key_Up :
-        rotate(90);
-        if(isColliding())
-            rotate(-90);
-        break;
+//    case Qt::Key_Up :
+//        rotate(90);
+//        if(isColliding())
+//            rotate(-90);
+//        break;
 
     // ¿Õ¸ñ¼üÊµÏÖ×¹Âä
     case Qt::Key_Space :

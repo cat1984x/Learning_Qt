@@ -216,7 +216,7 @@ void BoxGroup::moveOneStep()
     moveBy(0,20);
     if(isColliding())
     {
-        moveBy(0,20);
+        moveBy(0,-20);
         clearBoxGroup();
         emit needNewBox();
     }

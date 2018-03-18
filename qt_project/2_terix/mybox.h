@@ -39,6 +39,7 @@ public slots:
 private:
     BoxShape currentShape;
     QTransform oldTransform;
+    int angel;
     QTimer * timer;
 };
 
