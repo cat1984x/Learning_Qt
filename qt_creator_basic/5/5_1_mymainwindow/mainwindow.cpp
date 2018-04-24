@@ -4,6 +4,7 @@
 #include <QSpinBox>
 #include <QTextEdit>
 #include <QMdiSubWindow>
+#include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -35,6 +36,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->mainToolBar->addWidget(toolBtn);
     QSpinBox *spinBox = new QSpinBox(this);
     ui->mainToolBar->addWidget(spinBox);
+    ui->statusBar->showMessage(tr("欢迎使用多文档编辑器"),2000);
+    QLabel *permanent = new QLabel(this);
+    permanent->setFrameStyle(QFrame::Box|QFrame::Sunken);
+    permanent->setText("robobor.com");
+    ui->statusBar->addPermanentWidget(permanent);
 
 }
 
@@ -49,4 +55,9 @@ void MainWindow::on_action_New_triggered()
     QMdiSubWindow *child = ui->mdiArea->addSubWindow(edit);
     child->setWindowTitle(tr("多文档编辑器子窗口"));
     child->show();
+}
+
+void MainWindow::on_action_Dock_triggered()
+{
+    ui->dockWidget->show();
 }

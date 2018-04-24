@@ -16,12 +16,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_action_New_triggered();
-
-    void on_action_Dock_triggered();
+    void setText(const QString &string);
 
 private:
     Ui::MainWindow *ui;
 };
 
 #endif // MAINWINDOW_H
+
+
